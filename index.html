@@ -4,58 +4,99 @@
 <meta charset="UTF-8">
 <title>VJ Webster Suspense Romance</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-  body { background: #0d0d0d; color: #f2f2f2; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+  body { background: #0F1C2E; color: #f2f2f2; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+
   .container { max-width: 960px; margin: 0 auto; padding: 24px; }
-  .hero { text-align: center; padding: 60px 0; }
-  .hero h1 { font-size: 2.6rem; margin-bottom: 10px; }
-  .hero p { font-size: 1.2rem; color: #cccccc; }
-  .btn { display: inline-block; padding: 12px 20px; background: #c62828; color: #ffffff; text-decoration: none; border-radius: 4px; margin-top: 20px; }
-  .section-title { font-size: 1.8rem; margin: 40px 0 20px; }
-  .book { display: flex; flex-wrap: wrap; margin-bottom: 40px; border-top: 1px solid #333333; padding-top: 24px; }
+
+  /* HEADER */
+  .hero {
+    width: 100%;
+    background: linear-gradient(180deg, #0F1C2E 0%, #1A1A1A 100%);
+    text-align: center;
+    padding: 60px 0;
+  }
+  .hero h1 { font-size: 3rem; color: #F4E7CC; margin: 0; }
+  .hero p { font-size: 1.2rem; color: #F4D1D8; margin-top: 20px; }
+  .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #7A0F1A;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+
+  /* SECTIONS */
+  .section-title { font-size: 1.8rem; margin: 40px 0 20px; color: #F4E7CC; }
+
+  .book {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    border-top: 1px solid #333333;
+    padding-top: 24px;
+  }
   .book img { max-width: 360px; margin-right: 20px; border: 2px solid #222222; }
   .book-content { flex: 1; min-width: 240px; }
-  .book-title { font-size: 1.4rem; margin-bottom: 6px; }
-  .book-subtitle { color: #aaaaaa; margin-bottom: 10px; }
+  .book-title { font-size: 1.4rem; margin-bottom: 6px; color: #F4E7CC; }
+  .book-subtitle { color: #C9C9C9; margin-bottom: 10px; }
   .book-buttons a { margin-right: 10px; margin-top: 10px; }
-  form input { padding: 10px; width: 240px; border: none; border-radius: 4px; margin-right: 10px; }
-  form button { padding: 10px 18px; background: #c62828; color: #ffffff; border: none; border-radius: 4px; }
+
+  form input {
+    padding: 10px;
+    width: 240px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  form button {
+    padding: 10px 18px;
+    background: #7A0F1A;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+  }
+
+  /* FOOTER */
+  .footer {
+    width: 100%;
+    background: linear-gradient(180deg, #0F1C2E 0%, #1A1A1A 100%);
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .footer-title { color: #F4E7CC; font-size: 1.3rem; margin-bottom: 10px; }
+  .footer-genre { color: #C9C9C9; font-size: 1rem; margin-bottom: 20px; }
+  .footer-tagline {
+    color: #F4D1D8;
+    font-size: 0.95rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-copy { margin-top: 30px; font-size: 0.85rem; color: #A0A0A0; }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-  <section class="hero">
-    <h1>VJ Webster Suspense Romance</h1>
-    <p>Stories where danger and desire move together and every choice carries a cost</p>
-    <a href="#books" class="btn">Explore the Books</a>
-  </section>
+<!-- HEADER -->
+<section class="hero">
+  <h1>VJ Webster</h1>
+  <div style="font-size:1.4rem; color:#C9C9C9; margin-top:10px;">Suspense Romance</div>
+  <p>Stories where danger and desire rise together and every choice changes everything</p>
+  <a href="#books" class="btn">Explore the Books</a>
+</section>
+
+<div class="container">
 
   <section id="books">
     <h2 class="section-title">Featured Titles</h2>
 
-    <!-- ========================= -->
-    <!-- BOOK TEMPLATE (COPY THIS) -->
-    <!-- ========================= -->
-    <!--
-    <div class="book">
-      <img src="YOUR-COVER-FILENAME.jpg" alt="Your Book Title">
-      <div class="book-content">
-        <div class="book-title">Your Book Title</div>
-        <div class="book-subtitle">Genre / Subgenre</div>
-        <p>Your blurb goes here.</p>
-        <div class="book-buttons">
-          <a class="btn" href="YOUR-AMAZON-EBOOK-LINK" target="_blank">Amazon eBook</a>
-          <a class="btn" href="YOUR-AMAZON-PAPERBACK-LINK" target="_blank">Amazon Paperback</a>
-        </div>
-      </div>
-    </div>
-    -->
-    <!-- END TEMPLATE -->
-
-
-    <!-- BOOK 1 — Beyond the First Betrayal -->
+    <!-- BOOK 1 -->
     <div class="book">
       <img src="Beyond the Firts Betrayal.jpg" alt="Beyond the First Betrayal">
       <div class="book-content">
@@ -69,7 +110,7 @@
       </div>
     </div>
 
-    <!-- BOOK 2 — Beyond the Chambers -->
+    <!-- BOOK 2 -->
     <div class="book">
       <img src="KDP book cover .png" alt="Beyond the Chambers">
       <div class="book-content">
@@ -83,7 +124,7 @@
       </div>
     </div>
 
-    <!-- BOOK 3 — Beyond the Flight Plan -->
+    <!-- BOOK 3 -->
     <div class="book">
       <img src="ebook cover image .png" alt="Beyond the Flight Plan">
       <div class="book-content">
@@ -121,5 +162,14 @@
   </section>
 
 </div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-title">VJ Webster</div>
+  <div class="footer-genre">Suspense Romance</div>
+  <div class="footer-tagline">Stories where danger and desire rise together and every choice changes everything</div>
+  <div class="footer-copy">© 2026 VJ Webster. All rights reserved.</div>
+</div>
+
 </body>
 </html>

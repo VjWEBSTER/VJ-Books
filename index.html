@@ -6,38 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-  :root {
-    --bg-main: #0F1C2E;
-    --bg-alt: #1A1A1A;
-    --text-main: #f2f2f2;
-    --text-muted: #C9C9C9;
-    --text-soft: #F4D1D8;
-    --gold: #F4E7CC;
-    --accent: #7A0F1A;
-    --accent-hover: #8F1422;
-  }
-
-  body {
-    background: var(--bg-main);
-    color: var(--text-main);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-
-  body.light-mode {
-    --bg-main: #fdfdfd;
-    --bg-alt: #ffffff;
-    --text-main: #222222;
-    --text-muted: #555555;
-    --text-soft: #7A0F1A;
-    --gold: #7A0F1A;
-    --accent: #0F1C2E;
-    --accent-hover: #14263D;
-    background: var(--bg-main);
-    color: var(--text-main);
-  }
+  body { background: #0F1C2E; color: #f2f2f2; font-family: Arial, sans-serif; margin: 0; padding: 0; }
 
   /* ANIMATIONS */
   @keyframes fadeIn {
@@ -45,75 +14,9 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  @keyframes shimmer {
-    0% { opacity: 0.4; transform: translateX(-20px); }
-    50% { opacity: 1; transform: translateX(0); }
-    100% { opacity: 0.4; transform: translateX(20px); }
-  }
-
   .fade { animation: fadeIn 1.2s ease forwards; opacity: 0; }
 
   .container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
-
-  /* NAVIGATION */
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: rgba(15,28,46,0.95);
-    backdrop-filter: blur(6px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-    z-index: 1000;
-    border-bottom: 1px solid #333333;
-  }
-  body.light-mode .nav {
-    background: rgba(255,255,255,0.95);
-    border-bottom-color: #dddddd;
-  }
-  .nav-left {
-    font-size: 1.1rem;
-    color: var(--gold);
-    letter-spacing: 1px;
-    font-weight: 600;
-  }
-  .nav-right a {
-    color: var(--text-main);
-    text-decoration: none;
-    margin-left: 18px;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    transition: color 0.2s ease;
-  }
-  body.light-mode .nav-right a {
-    color: #222222;
-  }
-  .nav-right a:hover {
-    color: var(--gold);
-  }
-  .dark-toggle {
-    margin-left: 18px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    padding: 6px 10px;
-    border-radius: 20px;
-    border: 1px solid #444444;
-    color: var(--text-main);
-    background: transparent;
-    transition: all 0.3s ease;
-  }
-  body.light-mode .dark-toggle {
-    border-color: #bbbbbb;
-    color: #222222;
-  }
-  .dark-toggle:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
 
   /* HEADER */
   .hero {
@@ -122,21 +25,15 @@
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 140px 0 120px;
-    margin-top: 60px; /* offset for fixed nav */
+    padding: 120px 0;
   }
-  body.light-mode .hero {
-    background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(240,240,240,0.95) 100%), url('Author logo 3.1.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .hero h1 { font-size: 3.6rem; color: var(--gold); margin: 0; letter-spacing: 1px; }
-  .hero p { font-size: 1.25rem; color: var(--text-soft); margin-top: 24px; }
+  .hero h1 { font-size: 3.6rem; color: #F4E7CC; margin: 0; letter-spacing: 1px; }
+  .hero p { font-size: 1.25rem; color: #F4D1D8; margin-top: 24px; }
 
   .btn {
     display: inline-block;
     padding: 14px 24px;
-    background: var(--accent);
+    background: #7A0F1A;
     color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
@@ -145,7 +42,7 @@
     transition: all 0.3s ease;
   }
   .btn:hover {
-    background: var(--accent-hover);
+    background: #8F1422;
     box-shadow: 0 0 12px rgba(244,231,204,0.6);
     transform: translateY(-2px);
   }
@@ -154,16 +51,15 @@
   .section-title {
     font-size: 2rem;
     margin: 40px 0 24px;
-    color: var(--gold);
+    color: #F4E7CC;
     letter-spacing: 1px;
     position: relative;
-    text-align: center;
   }
   .section-title:after {
     content: "";
     width: 60px;
     height: 3px;
-    background: var(--gold);
+    background: #F4E7CC;
     display: block;
     margin: 12px auto 0;
   }
@@ -176,24 +72,17 @@
     padding-top: 24px;
     transition: all 0.3s ease;
   }
-  body.light-mode .book {
-    border-top-color: #dddddd;
-  }
   .book:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 18px rgba(0,0,0,0.4);
   }
-  body.light-mode .book:hover {
-    box-shadow: 0 0 18px rgba(0,0,0,0.15);
-  }
 
   .book img { max-width: 360px; margin-right: 24px; border: 2px solid #222222; }
-  body.light-mode .book img { border-color: #cccccc; }
 
   .book-content { flex: 1; min-width: 240px; }
 
   .start-anywhere {
-    background: var(--accent);
+    background: #7A0F1A;
     color: #ffffff;
     padding: 6px 12px;
     display: inline-block;
@@ -203,8 +92,8 @@
     border-radius: 4px;
   }
 
-  .book-title { font-size: 1.6rem; margin-bottom: 8px; color: var(--gold); font-weight: 600; }
-  .book-subtitle { color: var(--text-muted); margin-bottom: 14px; }
+  .book-title { font-size: 1.6rem; margin-bottom: 8px; color: #F4E7CC; font-weight: 600; }
+  .book-subtitle { color: #C9C9C9; margin-bottom: 14px; }
   .book-content p { margin-bottom: 20px; line-height: 1.55; }
 
   .book-buttons a { margin-right: 14px; margin-top: 14px; }
@@ -218,67 +107,25 @@
   }
   form button {
     padding: 12px 20px;
-    background: var(--accent);
+    background: #7A0F1A;
     color: #ffffff;
     border: none;
     border-radius: 4px;
   }
 
-  /* SERIES BANNER ANIMATION */
-  .series-strip {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    position: relative;
-  }
-  .series-title {
-    font-size: 1.7rem;
-    color: var(--gold);
-    letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
-    padding: 4px 12px;
-  }
-  .series-title:before {
-    content: "";
-    position: absolute;
-    left: -40px;
-    right: -40px;
-    top: 50%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    opacity: 0.4;
-    animation: shimmer 4s linear infinite;
-  }
-  .series-subtitle {
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    margin-top: 12px;
-  }
-
-  .buy-all-three {
-    margin-top: 20px;
-  }
-  .buy-all-three .btn {
-    margin-top: 10px;
-  }
-
   /* FOOTER */
   .footer {
     width: 100%;
-    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-alt) 100%);
+    background: linear-gradient(180deg, #0F1C2E 0%, #1A1A1A 100%);
     padding: 40px 0;
     text-align: center;
     margin-top: 40px;
     border-top: 1px solid #333333;
   }
-  body.light-mode .footer {
-    border-top-color: #dddddd;
-  }
-  .footer-title { color: var(--gold); font-size: 1.5rem; margin-bottom: 10px; }
-  .footer-genre { color: var(--text-muted); font-size: 1rem; margin-bottom: 16px; letter-spacing: 1px; }
+  .footer-title { color: #F4E7CC; font-size: 1.5rem; margin-bottom: 10px; }
+  .footer-genre { color: #C9C9C9; font-size: 1rem; margin-bottom: 16px; letter-spacing: 1px; }
   .footer-tagline {
-    color: var(--text-soft);
+    color: #F4D1D8;
     font-size: 0.95rem;
     max-width: 700px;
     margin-left: auto;
@@ -286,61 +133,20 @@
     line-height: 1.5;
   }
   .footer-copy { margin-top: 24px; font-size: 0.85rem; color: #A0A0A0; }
-
-  /* SMOOTH SCROLL */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* MOBILE REFINEMENTS */
-  @media (max-width: 768px) {
-    .nav {
-      padding: 0 16px;
-    }
-    .nav-right a {
-      margin-left: 12px;
-      font-size: 0.85rem;
-    }
-    .hero {
-      padding: 120px 16px 80px;
-    }
-    .hero h1 {
-      font-size: 2.6rem;
-    }
-    .book {
-      flex-direction: column;
-    }
-    .book img {
-      margin-right: 0;
-      margin-bottom: 16px;
-      max-width: 100%;
-    }
-    .container {
-      padding: 32px 16px;
-    }
-  }
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<div class="nav">
-  <div class="nav-left">VJ Webster</div>
-  <div class="nav-right">
-    <a href="#books">Books</a>
-    <a href="#author">About</a>
-    <a href="#subscribe">Subscribe</a>
-    <button class="dark-toggle" id="darkToggle">Dark Mode</button>
-  </div>
-</div>
-
 <!-- HEADER -->
 <section class="hero fade">
+
   <h1>VJ Webster</h1>
-  <div style="font-size:2.3rem; color:var(--gold); margin-top:24px; letter-spacing:3px;">
+
+  <div style="font-size:2.3rem; color:#F4E7CC; margin-top:24px; letter-spacing:3px;">
     SUSPENSE • ROMANCE • THRILLER
   </div>
+
   <p>Stories where danger and desire move together and every choice carries a cost</p>
   <a href="#books" class="btn">Explore the Books</a>
 </section>
@@ -348,18 +154,18 @@
 <div class="container fade">
 
   <!-- SERIES STRIP -->
-  <div class="series-strip">
-    <div class="series-title">THE BEYOND SERIES</div>
-    <div class="series-subtitle">
-      Three standalone suspense • romance • thriller novels. Start with any book.
+  <div style="text-align:center; margin-top:40px; margin-bottom:40px;">
+    <div style="font-size:1.7rem; color:#F4E7CC; letter-spacing:2px;">
+      THE BEYOND SERIES
     </div>
-    <div class="buy-all-three">
-      <a class="btn" href="https://www.amazon.com/s?k=VJ+Webster" target="_blank">Buy All Three on Amazon</a>
+    <div style="font-size:1.15rem; color:#C9C9C9; margin-top:12px;">
+      Three standalone suspense • romance • thriller novels. Start with any book.
     </div>
   </div>
 
   <!-- BOOKS SECTION -->
   <section id="books">
+
     <h2 class="section-title">Featured Titles</h2>
 
     <!-- BOOK 1 -->
@@ -419,15 +225,15 @@
   <section id="testimonials" class="fade" style="text-align:center; margin-top:60px; margin-bottom:60px;">
     <h2 class="section-title">Reader Praise</h2>
 
-    <p style="font-size:1.2rem; color:var(--text-soft); margin-bottom:20px;">
+    <p style="font-size:1.2rem; color:#F4D1D8; margin-bottom:20px;">
       Readers say these stories keep them awake long into the night
     </p>
 
-    <p style="font-size:1.2rem; color:var(--text-soft); margin-bottom:20px;">
+    <p style="font-size:1.2rem; color:#F4D1D8; margin-bottom:20px;">
       Readers say the tension feels real and the romance feels alive
     </p>
 
-    <p style="font-size:1.2rem; color:var(--text-soft);">
+    <p style="font-size:1.2rem; color:#F4D1D8;">
       Readers say the twists arrive when they least expect them
     </p>
   </section>
@@ -451,15 +257,6 @@
   <div class="footer-tagline">Stories where danger and desire rise together and every choice changes everything</div>
   <div class="footer-copy">© 2026 VJ Webster. All rights reserved.</div>
 </div>
-
-<script>
-  // Dark mode toggle
-  const toggle = document.getElementById('darkToggle');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    toggle.textContent = document.body.classList.contains('light-mode') ? 'Light Mode' : 'Dark Mode';
-  });
-</script>
 
 </body>
 </html>

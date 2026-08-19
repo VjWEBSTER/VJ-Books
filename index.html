@@ -8,28 +8,17 @@
 <style>
   body { background: #0F1C2E; color: #f2f2f2; font-family: Arial, sans-serif; margin: 0; padding: 0; }
 
-  /* ANIMATIONS */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .fade { animation: fadeIn 1.2s ease forwards; opacity: 0; }
-
   .container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
 
   /* HEADER */
   .hero {
     width: 100%;
-    background: linear-gradient(180deg, rgba(15,28,46,0.7) 0%, rgba(26,26,26,0.9) 100%), url('Author logo 3.1.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(180deg, #0F1C2E 0%, #1A1A1A 100%);
     text-align: center;
-    padding: 120px 0;
+    padding: 80px 0;
   }
-  .hero h1 { font-size: 3.6rem; color: #F4E7CC; margin: 0; letter-spacing: 1px; }
+  .hero h1 { font-size: 3.4rem; color: #F4E7CC; margin: 0; letter-spacing: 1px; }
   .hero p { font-size: 1.25rem; color: #F4D1D8; margin-top: 24px; }
-
   .btn {
     display: inline-block;
     padding: 14px 24px;
@@ -43,59 +32,23 @@
   }
   .btn:hover {
     background: #8F1422;
-    box-shadow: 0 0 12px rgba(244,231,204,0.6);
-    transform: translateY(-2px);
   }
 
   /* SECTIONS */
-  .section-title {
-    font-size: 2rem;
-    margin: 40px 0 24px;
-    color: #F4E7CC;
-    letter-spacing: 1px;
-    position: relative;
-  }
-  .section-title:after {
-    content: "";
-    width: 60px;
-    height: 3px;
-    background: #F4E7CC;
-    display: block;
-    margin: 12px auto 0;
-  }
+  .section-title { font-size: 2rem; margin: 40px 0 24px; color: #F4E7CC; letter-spacing: 1px; }
 
   .book {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     border-top: 1px solid #333333;
-    padding-top: 24px;
-    transition: all 0.3s ease;
+    padding-top: 20px;
   }
-  .book:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 18px rgba(0,0,0,0.4);
-  }
-
   .book img { max-width: 360px; margin-right: 24px; border: 2px solid #222222; }
-
   .book-content { flex: 1; min-width: 240px; }
-
-  .start-anywhere {
-    background: #7A0F1A;
-    color: #ffffff;
-    padding: 6px 12px;
-    display: inline-block;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-    border-radius: 4px;
-  }
-
-  .book-title { font-size: 1.6rem; margin-bottom: 8px; color: #F4E7CC; font-weight: 600; }
+  .book-title { font-size: 1.5rem; margin-bottom: 8px; color: #F4E7CC; font-weight: 600; }
   .book-subtitle { color: #C9C9C9; margin-bottom: 14px; }
   .book-content p { margin-bottom: 20px; line-height: 1.55; }
-
   .book-buttons a { margin-right: 14px; margin-top: 14px; }
 
   form input {
@@ -120,9 +73,8 @@
     padding: 40px 0;
     text-align: center;
     margin-top: 40px;
-    border-top: 1px solid #333333;
   }
-  .footer-title { color: #F4E7CC; font-size: 1.5rem; margin-bottom: 10px; }
+  .footer-title { color: #F4E7CC; font-size: 1.4rem; margin-bottom: 10px; }
   .footer-genre { color: #C9C9C9; font-size: 1rem; margin-bottom: 16px; letter-spacing: 1px; }
   .footer-tagline {
     color: #F4D1D8;
@@ -139,11 +91,13 @@
 <body>
 
 <!-- HEADER -->
-<section class="hero fade">
+<section class="hero">
+
+  <img src="Author logo 3.1.jpg" alt="VJ Webster Banner" style="width:100%; height:auto; display:block; margin-bottom:50px;">
 
   <h1>VJ Webster</h1>
 
-  <div style="font-size:2.3rem; color:#F4E7CC; margin-top:24px; letter-spacing:3px;">
+  <div style="font-size:2.2rem; color:#F4E7CC; margin-top:24px; letter-spacing:3px;">
     SUSPENSE • ROMANCE • THRILLER
   </div>
 
@@ -151,7 +105,7 @@
   <a href="#books" class="btn">Explore the Books</a>
 </section>
 
-<div class="container fade">
+<div class="container">
 
   <!-- SERIES STRIP -->
   <div style="text-align:center; margin-top:40px; margin-bottom:40px;">
@@ -165,14 +119,12 @@
 
   <!-- BOOKS SECTION -->
   <section id="books">
-
     <h2 class="section-title">Featured Titles</h2>
 
     <!-- BOOK 1 -->
-    <div class="book fade">
+    <div class="book">
       <img src="Beyond the Firts Betrayal.jpg" alt="Beyond the First Betrayal">
       <div class="book-content">
-        <div class="start-anywhere">START ANYWHERE</div>
         <div class="book-title">Beyond the First Betrayal</div>
         <div class="book-subtitle">Romantic Suspense / Political Conspiracy Thriller</div>
         <p>Eva Reyes notices what everyone else misses. When a routine audit reveals thirty five stolen minutes in a government log, she pulls the thread no one else would and uncovers a cover up that reaches the highest office in the country. The erased woman at the center of it, the program meant to stay buried, and the truth about Eva’s own father collide in a courtroom where someone is buying a verdict. As the conspiracy closes in and a slow burn romance with the one colleague she trusts finally surfaces, Eva must decide how much of her life she is willing to risk to finish what she started. Some betrayals are personal. This one is national.</p>
@@ -184,10 +136,9 @@
     </div>
 
     <!-- BOOK 2 -->
-    <div class="book fade">
+    <div class="book">
       <img src="KDP book cover .png" alt="Beyond the Chambers">
       <div class="book-content">
-        <div class="start-anywhere">START ANYWHERE</div>
         <div class="book-title">Beyond the Chambers</div>
         <div class="book-subtitle">Legal Thriller / Romantic Suspense</div>
         <p>Twenty three years ago, Judge Rowan Calder loved a woman on a lake house dock and let her walk away. Now Marina Vale is sitting at the defense table in his courtroom, charged with manslaughter, and he is the only man alive who can save her. He buries evidence. He compromises a juror. It should be enough until a sharp eyed prosecutor and a relentless investigator start pulling at the threads of his lie. As the conspiracy protecting them both begins to unravel, Calder must decide how much of his life he is willing to burn down for a woman he has not spoken to in over a decade and has never stopped loving. Some debts take twenty three years to come due. This one is about to collect.</p>
@@ -199,10 +150,9 @@
     </div>
 
     <!-- BOOK 3 -->
-    <div class="book fade">
+    <div class="book">
       <img src="ebook cover image .png" alt="Beyond the Flight Plan">
       <div class="book-content">
-        <div class="start-anywhere">START ANYWHERE</div>
         <div class="book-title">Beyond the Flight Plan</div>
         <div class="book-subtitle">Romantic Suspense / Corporate Conspiracy</div>
         <p>Captain Julian has not looked at his first officer in six months until one hotel bar changes everything. What begins as an affair neither of them planned becomes a reckoning. A falsified safety audit, a blackmailer with a decade of leverage, and a family secret Sarah spent eleven years outrunning. As the conspiracy tightens around them and Julian’s marriage collapses under its own weight, both of them must decide what is left worth saving. Some affairs ground everything. Some truths do too.</p>
@@ -216,13 +166,13 @@
   </section>
 
   <!-- AUTHOR -->
-  <section id="author" class="fade">
+  <section id="author">
     <h2 class="section-title">About VJ Webster</h2>
     <p>VJ Webster writes suspense romance that blends danger, desire and emotional heat into stories that grip from the first page. His characters face impossible choices, hidden truths and consequences that tighten around them as passion rises. Every novel pulls readers into a world where trust is fragile, secrets ignite conflict and love becomes the most dangerous force of all.</p>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="fade" style="text-align:center; margin-top:60px; margin-bottom:60px;">
+  <section id="testimonials" style="text-align:center; margin-top:60px; margin-bottom:60px;">
     <h2 class="section-title">Reader Praise</h2>
 
     <p style="font-size:1.2rem; color:#F4D1D8; margin-bottom:20px;">
@@ -239,7 +189,7 @@
   </section>
 
   <!-- SUBSCRIBE -->
-  <section id="subscribe" class="fade">
+  <section id="subscribe">
     <h2 class="section-title">Stay Connected</h2>
     <p>Join the list for early access to new releases and exclusive chapters</p>
     <form action="https://your-email-service-endpoint" method="post">
@@ -251,7 +201,7 @@
 </div>
 
 <!-- FOOTER -->
-<div class="footer fade">
+<div class="footer">
   <div class="footer-title">VJ Webster</div>
   <div class="footer-genre">Suspense • Romance • Thriller</div>
   <div class="footer-tagline">Stories where danger and desire rise together and every choice changes everything</div>
